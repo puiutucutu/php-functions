@@ -12,6 +12,10 @@ function chunk(array $arr, $size)
         return [];
     }
 
+    if ($size == 0) {
+        throw new InvalidArgumentException("Size must be a positive integer");
+    }
+
     $head = array_slice($arr, 0, $size);
     $tail = array_slice($arr, $size);
 

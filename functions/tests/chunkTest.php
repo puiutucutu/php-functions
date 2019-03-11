@@ -8,22 +8,10 @@ require_once dirname(__DIR__, 1) . DIRECTORY_SEPARATOR . "chunk.php";
 
 final class chunkTest extends TestCase
 {
-    public function testReturnsExpectedValue() : void
+    public function testInvalidArgumentExceptionIsThrownWhenChunkSizeIsZero() : void
     {
-        $chunked = chunk([1, 2, 3, 4, 5, 6, 7, 8], 3);
-        $chunkedExpected = [
-            [1, 2, 3],
-            [4, 5, 6],
-            [7, 8]
-        ];
-
-        sort($chunked);
-        sort($chunkedExpected);
-
-        $this->assertEquals(
-            $chunked,
-            $chunkedExpected
-        );
+        $this->expectException(InvalidArgumentException::class);
+        chunk([1, 2, 3, 4, 5, 6, 7, 8], 0);
     }
 
     public function testReturnsExpectedValueWhenArrayIsEmpty() : void
@@ -47,11 +35,62 @@ final class chunkTest extends TestCase
         );
     }
 
-    public function testReturnsExpectedValueWhenArrayHasOnlyTwoValues() : void
+    public function testReturnsExpectedValueWhenArrayHasTwoValues() : void
     {
         $chunked = chunk([1,2], 3);
         $chunkedExpected = [
             [1,2]
+        ];
+
+        sort($chunked);
+        sort($chunkedExpected);
+
+        $this->assertEquals(
+            $chunked,
+            $chunkedExpected
+        );
+    }
+
+    public function testReturnsExpectedValueWhenArrayHasThreeValues() : void
+    {
+        $chunked = chunk([1,2,3], 3);
+        $chunkedExpected = [
+            [1,2,3]
+        ];
+
+        sort($chunked);
+        sort($chunkedExpected);
+
+        $this->assertEquals(
+            $chunked,
+            $chunkedExpected
+        );
+    }
+
+    public function testReturnsExpectedValueWhenArrayHasFourValues() : void
+    {
+        $chunked = chunk([1,2,3,4], 3);
+        $chunkedExpected = [
+            [1,2,3],
+            [4],
+        ];
+
+        sort($chunked);
+        sort($chunkedExpected);
+
+        $this->assertEquals(
+            $chunked,
+            $chunkedExpected
+        );
+    }
+
+    public function testReturnsExpectedValueWhenArrayHasManyValues() : void
+    {
+        $chunked = chunk([1, 2, 3, 4, 5, 6, 7, 8], 3);
+        $chunkedExpected = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8]
         ];
 
         sort($chunked);
