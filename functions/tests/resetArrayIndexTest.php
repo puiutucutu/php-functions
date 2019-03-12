@@ -16,8 +16,8 @@ final class resetArrayIndexTest extends TestCase
             3 => "ghi",
         ];
 
-        $indexed = resetArrayIndex($data);
-        $indexKeys = array_keys($indexed);
+        $reIndexed = resetArrayIndex($data);
+        $indexKeys = array_keys($reIndexed);
 
         $this->assertEquals(
             $indexKeys,
