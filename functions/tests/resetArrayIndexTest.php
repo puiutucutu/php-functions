@@ -41,4 +41,9 @@ final class resetArrayIndexTest extends TestCase
 
         $this->assertEquals(resetArrayIndex($inputArr), $expectedArr);
     }
+
+    public function testHandlesEmptyArraysGracefully() : void
+    {
+        $this->assertEquals(resetArrayIndex([]), []);
+    }
 }
