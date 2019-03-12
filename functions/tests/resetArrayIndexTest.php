@@ -21,7 +21,7 @@ final class resetArrayIndexTest extends TestCase
 
         $this->assertEquals(
             $indexKeys,
-            [0,1,2]
+            [0, 1, 2]
         );
     }
 }
