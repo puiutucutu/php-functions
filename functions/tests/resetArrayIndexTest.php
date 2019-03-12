@@ -8,7 +8,7 @@ require_once dirname(__DIR__, 1) . DIRECTORY_SEPARATOR . "resetArrayIndex.php";
 
 final class resetArrayIndexTest extends TestCase
 {
-    public function testReturnsExpectedValues() : void
+    public function testReturnsArrayWithExpectedKeys() : void
     {
         $data = [
             0 => "abc",
@@ -23,5 +23,22 @@ final class resetArrayIndexTest extends TestCase
             $indexKeys,
             [0, 1, 2]
         );
+    }
+
+    public function testReturnsArrayWithValuesInProperOrder() : void
+    {
+        $inputArr = [
+            0 => "abc",
+            1 => "def",
+            3 => "ghi",
+        ];
+
+        $expectedArr = [
+            0 => "abc",
+            1 => "def",
+            2 => "ghi",
+        ];
+
+        $this->assertEquals(resetArrayIndex($inputArr), $expectedArr);
     }
 }
