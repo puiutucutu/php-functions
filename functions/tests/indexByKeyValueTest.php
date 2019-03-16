@@ -68,7 +68,7 @@ final class indexByKeyValueTest extends TestCase
     public function
     testExceptionMessageIsCorrectWhenKeyNameDoesNotExistInArrayElements() : void
     {
-        $this->expectExceptionMessage("Key name of `username` does not exist on item at key `0`");
+        $this->expectExceptionMessage("Key name of `username` does not exist on item at index `0`");
         indexByKeyValue($this->testData, "username");
     }
 }

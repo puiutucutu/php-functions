@@ -13,7 +13,7 @@ function indexByKeyValue(array $items, $keyName)
     foreach ($items as $k => $v) {
         if (!isset($v[$keyName])) {
             throw new OutOfBoundsException(
-                "Key name of `${keyName}` does not exist on item at key `${k}`"
+                "Key name of `${keyName}` does not exist on item at index `${k}`"
             );
         }
         $temp[$v[$keyName]] = $v;
