@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 use PHPUnit\Framework\TestCase;
 
-require_once dirname(__DIR__, 1) . DIRECTORY_SEPARATOR . "reindexUsingKey.php";
+require_once dirname(__DIR__, 1) . DIRECTORY_SEPARATOR . "indexByKeyValue.php";
 
-final class reindexUsingKeyTest extends TestCase
+final class indexByKeyValueTest extends TestCase
 {
     protected $testData = [
         [
@@ -53,7 +53,7 @@ final class reindexUsingKeyTest extends TestCase
         ];
 
         $this->assertEquals(
-            reindexUsingKey($this->testData, "title"),
+            indexByKeyValue($this->testData, "title"),
             $expectedData
         );
     }
@@ -62,13 +62,13 @@ final class reindexUsingKeyTest extends TestCase
     testThrowsOutOfBoundsExceptionWhenKeyNameDoesNotExistInArrayElements() : void
     {
         $this->expectException(OutOfBoundsException::class);
-        reindexUsingKey($this->testData, "username");
+        indexByKeyValue($this->testData, "username");
     }
 
     public function
     testExceptionMessageIsCorrectWhenKeyNameDoesNotExistInArrayElements() : void
     {
         $this->expectExceptionMessage("Key name of `username` does not exist on item at key `0`");
-        reindexUsingKey($this->testData, "username");
+        indexByKeyValue($this->testData, "username");
     }
 }

@@ -7,7 +7,7 @@
  * @return array
  * @throws OutOfBoundsException
  */
-function reindexUsingKey(array $items, $keyName)
+function indexByKeyValue(array $items, $keyName)
 {
     $temp = [];
     foreach ($items as $k => $v) {
