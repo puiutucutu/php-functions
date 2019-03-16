@@ -5,18 +5,18 @@
  * @param string $keyName
  *
  * @return array
- * @throws \Exception
+ * @throws OutOfBoundsException
  */
 function reindexUsingKey(array $items, $keyName)
 {
     $temp = [];
-    foreach ($items as $k => $value) {
-        if (!isset($value[$keyName])) {
-            throw new Exception(
-                "Key name of ${keyName} does not exist on item at key ${k}"
+    foreach ($items as $k => $v) {
+        if (!isset($v[$keyName])) {
+            throw new OutOfBoundsException(
+                "Key name of `${keyName}` does not exist on item at key `${k}`"
             );
         }
-        $temp[$keyName] = $value[$keyName];
+        $temp[$v[$keyName]] = $v;
     }
 
     return $temp;
