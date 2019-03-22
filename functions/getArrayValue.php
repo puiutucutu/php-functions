@@ -1,18 +1,18 @@
 <?php
 
 /**
- * @param array  $arr
+ * @param array  $items
  * @param string $key
  *
  * @return mixed
  * @throws \OutOfBoundsException
  */
-function getArrayValue(array $arr, $key) {
-    if (hasKey($arr, $key)) {
-        return $arr[$key];
+function getArrayValue(array $items, $key) {
+    if (array_key_exists($key, $items)) {
+        return $items[$key];
     }
 
     throw new \OutOfBoundsException(
-        "Array does not contain key with name `${key}`"
+        "Array does not contain key with name: `${key}`"
     );
 }
