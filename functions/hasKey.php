@@ -3,9 +3,9 @@
 /**
  * @param array  $arr
  * @param string $key
-*
-* @return bool
-    */
+ *
+ * @return bool
+ */
 function hasKey(array $arr, $key)
 {
     return (
