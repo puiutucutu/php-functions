@@ -20,7 +20,7 @@ final class padRightWithSpaceTest extends TestCase
         );
     }
 
-    public function testReturnsRightPaddedStringWhenGivenAnEmptyString() : void
+    public function testReturnsPaddedStringWhenGivenAnEmptyString() : void
     {
         $this->assertEquals(
             padRightWithSpace(""),
