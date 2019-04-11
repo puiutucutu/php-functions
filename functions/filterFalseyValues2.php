@@ -1,3 +1,5 @@
+<?php
+
 /**
  * Removes array items that double negate to false (i.e., are falsely).
  *
