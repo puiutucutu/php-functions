@@ -4,11 +4,11 @@
  * Collapses an array of strings into a single string delimited with a
  * semicolon.
  *
- * @param array $values
+ * @param array $xs
  *
  * @return string
  */
-function collapseToColonDelimitedString(array $values)
+function collapseToColonDelimitedString(array $xs)
 {
-    return implode(";", $values);
+    return implode(";", $xs);
 }
