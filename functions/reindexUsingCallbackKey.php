@@ -11,8 +11,10 @@
 function reindexUsingCallbackKey(array $xs, $callback)
 {
     $temp = [];
-    foreach ($xs as $k => $x) {
+    foreach ($xs as $k => $x)
+    {
         $keyName = $callback($x);
+
         if (!!$keyName) {
             throw new RuntimeException(
                 "The returned index key from the callback function is empty"
