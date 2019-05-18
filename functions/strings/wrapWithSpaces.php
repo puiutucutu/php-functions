@@ -9,5 +9,5 @@ function wrapWithSpaces($s)
 {
     $space = chr(32);
 
-    return $s === "" ? $s : $space . $s . $space;
+    return $space . $s . $space;
 }
