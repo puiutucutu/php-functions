@@ -1,15 +1,15 @@
 <?php
 
 /**
- * @param array  $arr
+ * @param array  $xs
  * @param string $key
  *
  * @return bool
  */
-function hasKey(array $arr, $key)
+function hasKey(array $xs, $key)
 {
     return (
-        isset($arr[$key]) or
-        array_key_exists($key, $arr)
+        isset($xs[$key]) or
+        array_key_exists($key, $xs)
     );
 }
