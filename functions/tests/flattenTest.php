@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 use PHPUnit\Framework\TestCase;
 
-require_once dirname(__DIR__, 1) . DIRECTORY_SEPARATOR . "flattenArray.php";
+require_once dirname(__DIR__, 2) . DIRECTORY_SEPARATOR . "array/flatten.php";
 
-final class flattenArrayTest extends TestCase
+final class flattenTest extends TestCase
 {
     protected $testData = [
         "userId" => 1,
@@ -22,7 +22,7 @@ final class flattenArrayTest extends TestCase
 
     public function testReturnsExpectedValue() : void
     {
-        $flattened = flattenArray($this->testData);
+        $flattened = flatten($this->testData);
         $expectedOutput = [
             1,
             1,
