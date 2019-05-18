@@ -1,20 +1,20 @@
 <?php
 
 /**
- * @param array $toTest
+ * @param array $xs
  *
  * @return bool
  * @throws \InvalidArgumentException When array is not one dimensional
  */
-function containsDuplicates(array $toTest)
+function containsDuplicates(array $xs)
 {
-    foreach ($toTest as $value) {
-        if (is_array($value)) {
+    foreach ($xs as $x) {
+        if (is_array($x)) {
             throw new \InvalidArgumentException(
                 "Array must be one dimensional"
             );
         }
     }
 
-    return count($toTest) > count(array_unique($toTest));
+    return count($xs) > count(array_unique($xs));
 }
