@@ -51,6 +51,24 @@ TEXT;
             $expected
         );
     }
+    
+    public function testReturnsExpectedValueWhenMultipleNewLineCharacters() : void
+    {
+        $cases = [
+            "Hello world",
+            "Hello \r world",
+            "Hello \n world",
+            "Hello \t world",
+            "Hello \f world",
+            "Hello \r\n world",
+            "Hello \r\n\t world",
+        ];
+
+        foreach ($cases as $case) 
+        {
+            $this->assertEquals(removeWhitespace($case), "Helloworld");
+        }
+    }
 
     public function testReturnsEmptyStringWhenGivenAnEmptyString() : void
     {
