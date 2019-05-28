@@ -27,7 +27,7 @@ final class removeWhitespaceTest extends TestCase
             "Helloworld"
         );
     }
-//
+
     public function testReturnsExpectedValueWhenTripleSpace() : void
     {
         $this->assertEquals(
