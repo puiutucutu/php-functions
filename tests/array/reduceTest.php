@@ -15,10 +15,8 @@ final class reduceTest extends TestCase
             return ($sum + 1) * $toAdd;
         };
 
-        $numsAddedByReducing = reduce($reducer, 0, $xs);
-
         $this->assertEquals(
-            $numsAddedByReducing,
+            reduce($reducer, 0, $xs),
             64
         );
     }
