@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 use PHPUnit\Framework\TestCase;
 
-require_once dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . "array/resetArrayIndex.php";
+require_once dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . "array/reindex.php";
 
-final class resetArrayIndexTest extends TestCase
+final class reindexTest extends TestCase
 {
     public function testReturnsArrayWithExpectedKeys() : void
     {
@@ -16,7 +16,7 @@ final class resetArrayIndexTest extends TestCase
             3 => "ghi",
         ];
 
-        $reIndexed = resetArrayIndex($data);
+        $reIndexed = reindex($data);
         $indexKeys = array_keys($reIndexed);
 
         $this->assertEquals(
@@ -39,11 +39,11 @@ final class resetArrayIndexTest extends TestCase
             2 => "ghi",
         ];
 
-        $this->assertEquals(resetArrayIndex($inputArr), $expectedArr);
+        $this->assertEquals(reindex($inputArr), $expectedArr);
     }
 
     public function testHandlesEmptyArraysGracefully() : void
     {
-        $this->assertEquals(resetArrayIndex([]), []);
+        $this->assertEquals(reindex([]), []);
     }
 }
