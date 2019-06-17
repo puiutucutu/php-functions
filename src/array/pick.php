@@ -1,5 +1,7 @@
 <?php
 
+require_once "./reduce.php";
+
 /**
  * @param string[]|int[] $keys
  *
@@ -9,11 +11,13 @@
  */
 function pick($keys)
 {
-    return function ($obj) use ($keys) {
+    return function ($obj) use ($keys)
+    {
         $output = [];
         $objKeys = array_keys($obj);
 
-        foreach ($keys as $key) {
+        foreach ($keys as $key)
+        {
             if (in_array($key, $objKeys)) {
                 $output[$key] = $obj[$key];
             }
