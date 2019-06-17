@@ -1,6 +1,6 @@
 <?php
 
-require_once "./hasKey.php";
+require_once dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . "functions/array/hasKey.php";
 
 /**
  * @param array  $xs
@@ -10,7 +10,7 @@ require_once "./hasKey.php";
  * @throws \OutOfBoundsException
  */
 function getArrayValue(array $xs, $key) {
-    if (hasKey($key, $xs)) {
+    if (hasKey($xs, $key)) {
         return $xs[$key];
     }
 
