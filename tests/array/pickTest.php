@@ -22,7 +22,7 @@ final class pickTest extends TestCase
         ];
 
         $this->assertEquals(
-            pick(["id", "brand"]) ($data),
+            pick (["id", "brand"]) ($data),
             ["id" => 123, "brand" => "bmw"]
         );
     }
