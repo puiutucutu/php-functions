@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use PHPUnit\Framework\TestCase;
 
-require_once dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . "array/reindex.php";
+require_once dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . "src/array/reindex.php";
 
 final class reindexTest extends TestCase
 {

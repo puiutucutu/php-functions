@@ -1,6 +1,6 @@
 <?php
 
-require_once dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . "functions/array/hasKey.php";
+require_once dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . "src/array/hasKey.php";
 
 /**
  * @param array  $xs

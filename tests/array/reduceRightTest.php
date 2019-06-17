@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use PHPUnit\Framework\TestCase;
 
-require_once dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . "array/reduceRight.php";
+require_once dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . "src/array/reduceRight.php";
 
 final class reduceRightTest extends TestCase
 {

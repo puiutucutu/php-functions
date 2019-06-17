@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use PHPUnit\Framework\TestCase;
 
-require_once dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . "array/map.php";
+require_once dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . "src/array/map.php";
 
 final class mapTest extends TestCase
 {
