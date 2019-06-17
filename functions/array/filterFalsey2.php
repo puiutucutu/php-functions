@@ -10,7 +10,7 @@
  * @return array
  * @throws \UnexpectedValueException When a multidimensional array is passed
  */
-function filterFalseyValues2(array $items, $shouldReindex = false)
+function filterFalsey2(array $items, $shouldReindex = false)
 {
     foreach ($items as $item) {
         if (is_array($item)) {

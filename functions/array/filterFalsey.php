@@ -5,7 +5,7 @@
  *
  * @return array
  */
-function filterFalseyValues(array $values)
+function filterFalsey(array $values)
 {
     return array_filter(
         $values,
