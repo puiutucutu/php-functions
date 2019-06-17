@@ -4,7 +4,8 @@ require_once dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . "src/array/reduce
 
 function pickViaReduceCurried($keys)
 {
-    return function ($obj) use ($keys) {
+    return function ($obj) use ($keys)
+    {
         return reduceArity
         (
             function ($acc, $currKey) use ($obj) {
