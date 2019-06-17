@@ -7,7 +7,7 @@
  *
  * @return mixed
  */
-function arrayReduce(array $source, callable $reducer, $initial)
+function reduce(array $source, callable $reducer, $initial)
 {
     $accumulator = $initial;
     foreach ($source as $currIndex => $currValue) {

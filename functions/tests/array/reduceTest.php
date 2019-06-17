@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use PHPUnit\Framework\TestCase;
 
-require_once dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . "array/arrayReduce.php";
+require_once dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . "array/reduce.php";
 
 final class arrayReduceTest extends TestCase
 {
@@ -15,7 +15,7 @@ final class arrayReduceTest extends TestCase
             return ($sum + 1) * $toAdd;
         };
 
-        $numsAddedByReducing = arrayReduce($reduceable, $reducer, 0);
+        $numsAddedByReducing = reduce($reduceable, $reducer, 0);
 
         $this->assertEquals(
             $numsAddedByReducing,
