@@ -1,7 +1,5 @@
 <?php
 
-require_once "./reduce.php";
-
 /**
  * @param string[]|int[] $keys
  *
