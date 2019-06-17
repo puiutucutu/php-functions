@@ -2,10 +2,9 @@
 
 /**
  * @param array   $xs
- * @param closure $f  A function that will be supplied with three
- *                    arguments - (i) the current iterated value, (ii)
- *                    the current iteration index, (iii) the original
- *                    array.
+ * @param closure $f  A function that will be supplied with three arguments -
+ *                    (i) the current iterated value, (ii) the current
+ *                    iteration index, (iii) the original array.
  *
  * @return array
  */
