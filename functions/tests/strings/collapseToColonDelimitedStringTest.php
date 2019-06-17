@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use PHPUnit\Framework\TestCase;
 
-require_once dirname(__DIR__, 2)
+require_once dirname(dirname(__DIR__))
     . DIRECTORY_SEPARATOR
     . "strings"
     . DIRECTORY_SEPARATOR
