@@ -2,6 +2,21 @@
 
 require_once dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . "src/array/reduce.php";
 
+function reduceArity(callable $reducer)
+{
+    return function ($accumulatorInitialValue) use ($reducer)
+    {
+        return function($source) use ($reducer, $accumulatorInitialValue)
+        {
+            $accumulator = $accumulatorInitialValue;
+            foreach ($source as $currIndex => $currValue) {
+                $accumulator = $reducer($accumulator, $currValue);
+            }
+            return $accumulator;
+        };
+    };
+}
+
 /**
  * @param string[]|int[] $keys
  *
@@ -13,16 +28,17 @@ function pickViaReduce($keys)
 {
     return function($obj) use ($keys)
     {
-        return reduce
-        (
-            function ($acc, $currKey) use ($obj) {
-                if (isset($obj[$currKey])) {
-                    $acc[$currKey] = $obj[$currKey];
+        return reduceArity
+            (
+                function ($acc, $currKey) use ($obj) {
+                    if (isset($obj[$currKey])) {
+                        $acc[$currKey] = $obj[$currKey];
+                    }
+                    return $acc;
                 }
-                return $acc;
-            },
-            [],
-            $keys
-        );
+            )
+            ([])
+            ($keys)
+        ;
     };
 }
