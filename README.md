@@ -7,5 +7,5 @@ A repo for commonly used functions and abstractions.
 ```bash
 git clone https://github.com/puiu91/functional-php-drills.git
 cd functional-php-drills
-./vendor/bin/phpunit --bootstrap vendor/autoload.php functions/tests --testdox
+clear; ./vendor/bin/phpunit --bootstrap vendor/autoload.php --testdox functions/tests;
 ```
