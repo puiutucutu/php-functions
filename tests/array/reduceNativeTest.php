@@ -15,7 +15,7 @@ final class reduceNativeTest extends TestCase
             return ($sum + 1) * $toAdd;
         };
 
-        $numsAddedByReducing = reduce($reduceable, $reducer, 0);
+        $numsAddedByReducing = reduceNative($reduceable, $reducer, 0);
 
         $this->assertEquals(
             $numsAddedByReducing,
