@@ -10,12 +10,12 @@ final class reduceTest extends TestCase
 {
     public function testReturnsExpectedValue() : void
     {
-        $reduceable = [1, 2, 3, 4];
+        $xs = [1, 2, 3, 4];
         $reducer = function ($sum, $toAdd) {
             return ($sum + 1) * $toAdd;
         };
 
-        $numsAddedByReducing = reduce($reduceable, $reducer, 0);
+        $numsAddedByReducing = reduce($reducer, 0, $xs);
 
         $this->assertEquals(
             $numsAddedByReducing,

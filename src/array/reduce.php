@@ -1,17 +1,17 @@
 <?php
 
 /**
- * @param array    $source
  * @param callable $reducer
- * @param mixed    $initial
+ * @param mixed    $accumulatorInitialValue
+ * @param array    $source
  *
  * @return mixed
  */
-function reduce(array $source, callable $reducer, $initial)
+function reduce(callable $reducer, $accumulatorInitialValue, array $source)
 {
-    $accumulator = $initial;
+    $accumulator = $accumulatorInitialValue;
     foreach ($source as $currIndex => $currValue) {
-        $accumulator = $reducer($accumulator, $currValue, $currIndex, $source);
+        $accumulator = $reducer($accumulator, $currValue);
     }
 
     return $accumulator;
