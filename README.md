@@ -11,6 +11,10 @@ cd php-functions;
 clear; ./vendor/bin/phpunit --bootstrap vendor/autoload.php --testdox tests;
 ```
 
+## Todos
+
+Finish implementing tests.
+
 ## Other Resources
 
 A clean implementation of pipe using magic method __call() that allows for using function names natively without having to use lambda functions.
