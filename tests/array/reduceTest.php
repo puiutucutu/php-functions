@@ -6,7 +6,7 @@ use PHPUnit\Framework\TestCase;
 
 require_once dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . "src/array/reduce.php";
 
-final class arrayReduceTest extends TestCase
+final class reduceTest extends TestCase
 {
     public function testReturnsExpectedValue() : void
     {
