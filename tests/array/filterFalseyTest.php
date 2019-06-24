@@ -19,10 +19,12 @@ final class filterFalseyValuesTest extends TestCase
             false,
             "false",
             [],
+            [1, 2, 3]
         ];
 
         $expectedOutput = [
-            6 => "false"
+            6 => "false",
+            8 => [1, 2, 3]
         ];
 
         $this->assertEquals($expectedOutput, filterFalsey($values));
