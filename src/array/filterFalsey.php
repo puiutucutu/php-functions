@@ -9,7 +9,7 @@ function filterFalsey(array $values)
 {
     return array_filter(
         $values,
-        function($value) {
+        function ($value) {
             return !!$value;
         }
     );
