@@ -15,7 +15,7 @@ function pipe(callable ...$functions) : callable
             function ($accumulator, $currFn) { // the reducer (a reducing function)
                 return $currFn($accumulator);
             },
-            $initialAccumulator // the initial value of the accumulator
+            $initialAccumulator
         );
     };
 }
