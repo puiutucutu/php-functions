@@ -19,6 +19,38 @@ print_r($temp);
 print_r(dedupeTwoDimensionalArray($temp));
 die;
 
+/*
+
+Array
+(
+    [0] => Array
+        (
+            [a] => 1
+            [b] => 2
+            [c] => 3
+        )
+
+    [1] => Array
+        (
+            [b] => 2
+            [c] => 3
+            [a] => 1
+        )
+
+)
+Array
+(
+    [0] => Array
+        (
+            [a] => 1
+            [b] => 2
+            [c] => 3
+        )
+
+)
+
+*/
+
 */
 
 function dedupeTwoDimensionalArray(array $xs)
