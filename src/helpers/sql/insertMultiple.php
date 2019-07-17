@@ -1,5 +1,39 @@
 <?php
 
+/*
+
+$partialSQL = <<<SQL
+
+INSERT INTO cars
+(
+    brand,
+    model
+)
+
+>>>;
+
+$data = [
+    ["BMW", "3 Series"],
+    ["Mercedes", "G Klasse"],
+];
+
+insertMultiple($dbhInstance, $partialSQL, $data); 
+
+//
+// will generate the following SQL internally
+// 
+// INSERT INTO cars
+// (
+//     brand,
+//     model
+// )
+// VALUES
+// ("BMW", "3 Series"),
+// ("Mercedes", "G Klasse")
+//
+
+*/
+
 /**
  * @param \PDO   $dbh
  * @param string $partialInsertSql
