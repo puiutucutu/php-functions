@@ -19,6 +19,8 @@ print_r($temp);
 print_r(dedupeTwoDimensionalArray($temp));
 die;
 
+*/
+
 /*
 
 Array
@@ -51,8 +53,11 @@ Array
 
 */
 
-*/
-
+/**
+ * @param array $xs
+ *
+ * @return array
+ */
 function dedupeTwoDimensionalArray(array $xs)
 {
     if (count($xs) === 0) {
