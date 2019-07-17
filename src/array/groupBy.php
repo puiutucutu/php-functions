@@ -2,19 +2,12 @@
 
 /*
 
-// before
-
 $temp = [
   ["brand" => "BMW", "model" => "3 Series"],
   ["brand" => "Mercedes", "model" => "G Klasse"],
 ];
 
-// after
-
-$temp = [
-  "BMW" => ["model" => "3 Series"],
-  "Mercedes" => ["model" => "G Klasse"],
-];
+$after = groupBy("brand", $temp); //=> ["BMW" => ["model" => "3 Series"], "Mercedes" => ["model" => "G Klasse"]];
 
 */
 
