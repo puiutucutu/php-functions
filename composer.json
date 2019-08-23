@@ -1,8 +1,15 @@
 {
-  "require": {
-    "monolog/monolog": "1.0.*"
+  "name": "puiutucutu/php-functions",
+  "type": "library",
+  "autoload": {
+    "files": [
+      "src/index.php"
+    ]
   },
   "require-dev": {
     "phpunit/phpunit": "7"
+  },
+  "scripts": {
+    "tests": "phpunit --bootstrap vendor/autoload.php --testdox tests"
   }
 }

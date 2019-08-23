@@ -4,14 +4,6 @@ declare(strict_types=1);
 
 use PHPUnit\Framework\TestCase;
 
-require_once dirname(dirname(__DIR__))
-    . DIRECTORY_SEPARATOR
-    . "src"
-    . DIRECTORY_SEPARATOR
-    . "strings"
-    . DIRECTORY_SEPARATOR
-    . "wrapInParentheses.php";
-
 final class wrapInParenthesesTest extends TestCase
 {
     public function testReturnsExpectedValueWhenSingleSpace() : void

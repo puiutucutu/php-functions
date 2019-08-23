@@ -52,7 +52,7 @@ final class SquareBrackets extends Bracket
  *
  * @return \Closure Expects a string to surround with requested bracket type.
  */
-function surroundWithBrackets(Bracket $bracketType)
+function surroundWithBracketsLocal(Bracket $bracketType)
 {
     return function($x) use ($bracketType) {
         $start = $bracketType->getOpeningBrace();
@@ -61,7 +61,11 @@ function surroundWithBrackets(Bracket $bracketType)
     };
 }
 
+/*
+
 $myStr = "abc";
-$myStrBracketed = surroundWithBrackets (new BracesBracket()) ($myStr);
+$myStrBracketed = surroundWithBracketsLocal (new BracesBracket()) ($myStr);
 
 var_dump($myStrBracketed);
+
+*/

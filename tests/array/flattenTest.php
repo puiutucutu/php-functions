@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 use PHPUnit\Framework\TestCase;
 
-require_once dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . "src/array/flatten.php";
-
 final class flattenTest extends TestCase
 {
     protected $testData = [

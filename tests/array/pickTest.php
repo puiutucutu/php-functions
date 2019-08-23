@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 use PHPUnit\Framework\TestCase;
 
-require_once dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . "src/array/pick.php";
-
 final class pickTest extends TestCase
 {
     public function testReturnsExpectedValueWhenArrayIsEmpty() : void

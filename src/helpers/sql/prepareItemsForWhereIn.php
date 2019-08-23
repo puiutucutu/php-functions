@@ -1,7 +1,5 @@
 <?php
 
-require_once "../strings/wrapWith.php";
-
 /**
  * @param array $items
  *
