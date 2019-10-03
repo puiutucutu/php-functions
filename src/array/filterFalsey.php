@@ -1,16 +1,13 @@
 <?php
 
 /**
- * @param array $values
+ * @param array $xs
  *
  * @return array
  */
-function filterFalsey(array $values)
+function filterFalsey(array $xs)
 {
-    return array_filter(
-        $values,
-        function ($value) {
-            return !!$value;
-        }
-    );
+    return array_filter($xs, function($x) {
+        return !!$x;
+    });
 }
