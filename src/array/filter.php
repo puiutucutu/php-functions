@@ -1,18 +1,14 @@
 <?php
 
 /**
- * @param array   $arr
- * @param closure $predicateFilterer A function that will be supplied two
- *                                   arguments - (i) the current iterated
- *                                   value and (ii) the current iteration index.
+ * @param closure $predicate A function that will be supplied two arguments -
+ *                           (i) the current iterated value and (ii) the
+ *                           current iteration index.
+ * @param array   $xs
  *
  * @return array
  */
-function filter(array $arr, closure $predicateFilterer)
+function filter(closure $predicate, array $xs)
 {
-    return array_filter(
-        $arr,
-        $predicateFilterer,
-        ARRAY_FILTER_USE_BOTH
-    );
+    return array_filter($xs, $predicate, ARRAY_FILTER_USE_BOTH);
 }

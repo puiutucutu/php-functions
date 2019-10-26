@@ -10,7 +10,7 @@ require_once dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . "src/array/hasKey
  * @throws \OutOfBoundsException
  */
 function getArrayValue(array $xs, $key) {
-    if (hasKey($xs, $key)) {
+    if (hasKey($key, $xs)) {
         return $xs[$key];
     }
 

@@ -1,12 +1,12 @@
 <?php
 
 /**
- * @param array  $xs
  * @param string $key
+ * @param array  $xs
  *
  * @return bool
  */
-function hasKey(array $xs, $key)
+function hasKey($key, array $xs)
 {
     return (
         isset($xs[$key]) or

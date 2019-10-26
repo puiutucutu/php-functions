@@ -14,7 +14,7 @@ final class hasKeyTest extends TestCase
             "three" => 3,
         ];
 
-        $this->assertEquals(hasKey($data, "two"), true);
+        $this->assertEquals(hasKey("two", $data), true);
     }
 
     public function testReturnsFalseWhenArrayDoesNotHaveValue() : void
@@ -25,7 +25,7 @@ final class hasKeyTest extends TestCase
             "three" => 3,
         ];
 
-        $this->assertEquals(hasKey($data, "four"), false);
+        $this->assertEquals(hasKey("four", $data), false);
     }
 
     public function testReturnsTrueWhenArrayContainsNullKey() : void
@@ -34,7 +34,7 @@ final class hasKeyTest extends TestCase
             null => 1,
         ];
 
-        $this->assertEquals(hasKey($data, null), true);
+        $this->assertEquals(hasKey(null, $data), true);
     }
 
     public function testReturnsTrueWhenArrayContainsBooleanFalseKey() : void
@@ -43,7 +43,7 @@ final class hasKeyTest extends TestCase
             false => 1,
         ];
 
-        $this->assertEquals(hasKey($data, false), true);
+        $this->assertEquals(hasKey(false, $data), true);
     }
 
     public function testReturnsTrueWhenArrayContainsBooleanTrueKey() : void
@@ -52,6 +52,6 @@ final class hasKeyTest extends TestCase
             true => 1,
         ];
 
-        $this->assertEquals(hasKey($data, true), true);
+        $this->assertEquals(hasKey(true, $data), true);
     }
 }

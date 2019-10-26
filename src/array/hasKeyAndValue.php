@@ -1,12 +1,12 @@
 <?php
 
 /**
- * @param array  $target
- * @param string $keyName
+ * @param string $key
+ * @param array  $xs
  *
  * @return bool
  */
-function hasKeyAndValue(array $target, $keyName)
+function hasKeyAndValue($key, array $xs)
 {
-    return hasKey($target, $keyName) && !!$target[$keyName];
+    return hasKey($key, $xs) && !!$xs[$key];
 }

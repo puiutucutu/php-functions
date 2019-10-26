@@ -21,5 +21,5 @@
  */
 function getValue($placeholder, $key, array $xs)
 {
-    return hasKey($xs, $key) ? $xs[$key] : $placeholder;
+    return hasKey($key, $xs) ? $xs[$key] : $placeholder;
 }
