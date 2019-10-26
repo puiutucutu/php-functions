@@ -1,15 +1,16 @@
 <?php
 
 /**
- * @param string $key
- * @param array  $xs
+ * @param string $k
+ * @param array  $xs An array to check the existence of the key against (only
+ *                   array keys of the first dimension will be checked).
  *
  * @return bool
  */
-function hasKey($key, array $xs)
+function hasKey($k, array $xs)
 {
     return (
-        isset($xs[$key]) or
-        array_key_exists($key, $xs)
+        isset($xs[$k]) or
+        array_key_exists($k, $xs)
     );
 }

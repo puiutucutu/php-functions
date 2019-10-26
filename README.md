@@ -15,6 +15,8 @@ clear; ./vendor/bin/phpunit --testdox;
 
 Finish implementing tests.
 
+* possibly rename `getValue` to `getProperty` or `getPropWithDefault`
+
 ## Other Resources
 
 A clean implementation of pipe using magic method __call() that allows for using function names natively without having to use lambda functions.
