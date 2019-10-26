@@ -1,9 +1,11 @@
 <?php
 
 /**
- * @param mixed  $placeholder Value to be returned if key does have a value in the supplied array.
+ * @param mixed  $placeholder Value to be returned if key does have a value in
+ *                            the supplied array.
  * @param string $key         The key name to retrieve the array value from.
- * @param array  $xs          An array that will be treated as if it were one dimensional.
+ * @param array  $xs          An array that will be treated as if it were one
+ *                            dimensional.
  *
  * @return mixed Either <V> of <K,V> in the array or the placeholder.
  * @example
