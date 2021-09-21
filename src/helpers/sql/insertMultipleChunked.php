@@ -12,7 +12,7 @@ require_once __DIR__ . DIRECTORY_SEPARATOR . "insertMultiple.php";
  *                           param limit in TSQL.
  *
  * @return void
- *
+ * @example insertMultipleChunked($dbh, "INSERT INTO Fruits VALUES (Name, Colour)", [["banana","yellow"], ["lime","green"]]);
  * @see https://docs.microsoft.com/en-us/sql/t-sql/statements/insert-transact-sql?view=sql-server-2017
  * @see https://docs.microsoft.com/en-us/sql/t-sql/queries/table-value-constructor-transact-sql?view=sql-server-2017
  */

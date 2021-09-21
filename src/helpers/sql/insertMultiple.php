@@ -4,32 +4,32 @@
 
 $partialSQL = <<<SQL
 
-INSERT INTO cars
+INSERT INTO Fruits
 (
-    brand,
-    model
+    Name,
+    Colour
 )
 
 >>>;
 
 $data = [
-    ["BMW", "3 Series"],
-    ["Mercedes", "G Klasse"],
+    ["banana", "yellow"],
+    ["lime", "green"],
 ];
 
-insertMultiple($dbhInstance, $partialSQL, $data); 
+insertMultiple($dbhInstance, $partialSQL, $data);
 
 //
 // will generate the following SQL internally
-// 
-// INSERT INTO cars
+//
+// INSERT INTO Fruits
 // (
-//     brand,
-//     model
+//     Name,
+//     Colour
 // )
 // VALUES
-// ("BMW", "3 Series"),
-// ("Mercedes", "G Klasse")
+// ("banana", "yellow"),
+// ("lime", "green")
 //
 
 */
@@ -40,6 +40,7 @@ insertMultiple($dbhInstance, $partialSQL, $data);
  * @param array  $data A 2-d array of data.
  *
  * @return void
+ * @example insertMultipleChunked($dbh, "INSERT INTO Fruits VALUES (Name, Colour)", [["banana","yellow"], ["lime","green"]]);
  * @see https://docs.microsoft.com/en-us/sql/t-sql/statements/insert-transact-sql?view=sql-server-2017
  * @see https://docs.microsoft.com/en-us/sql/t-sql/queries/table-value-constructor-transact-sql?view=sql-server-2017
  */
