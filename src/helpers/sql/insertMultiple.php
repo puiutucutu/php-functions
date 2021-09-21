@@ -40,12 +40,16 @@ insertMultiple($dbhInstance, $partialSQL, $data);
  * @param array  $data A 2-d array of data.
  *
  * @return void
- * @example insertMultipleChunked($dbh, "INSERT INTO Fruits VALUES (Name, Colour)", [["banana","yellow"], ["lime","green"]]);
+ * @example insertMultipleChunked($dbh, "INSERT INTO Fruits (Name, Colour)", [["banana","yellow"], ["lime","green"]]);
+
  * @see https://docs.microsoft.com/en-us/sql/t-sql/statements/insert-transact-sql?view=sql-server-2017
  * @see https://docs.microsoft.com/en-us/sql/t-sql/queries/table-value-constructor-transact-sql?view=sql-server-2017
  */
-function insertMultiple(PDO $dbh, $partialInsertSql, array $data)
-{
+function insertMultiple(
+    PDO $dbh,
+    $partialInsertSql,
+    array $data
+) {
     $wrapWithParentheses = function($x) {
         return "({$x})";
     };

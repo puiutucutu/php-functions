@@ -9,7 +9,5 @@
  */
 function wrapInSingleQuotes($string)
 {
-    return $string === ""
-        ? $string
-        : chr(39) . $string . chr(39);
+    return $string === "" ? $string : chr(39) . $string . chr(39);
 }

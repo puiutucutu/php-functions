@@ -5,6 +5,7 @@
  *
  * @return string
  */
-function wrapInParens($str) {
+function wrapInParens($str)
+{
     return "(${str})";
 }
