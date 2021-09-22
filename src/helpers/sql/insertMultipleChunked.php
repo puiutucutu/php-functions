@@ -23,11 +23,11 @@ function insertMultipleChunked(
     array $data,
     $MAX_PARAMS = 2000
 ) {
-    $colsPerRow = count($data[0]);
-    $colsTotal = $colsPerRow * count($data);
-    $chunkBy = $MAX_PARAMS / $colsPerRow;
+    $valuesPerRow = count($data[0]);
+    $valuesTotal = $valuesPerRow * count($data);
+    $chunkBy = $MAX_PARAMS / $valuesPerRow;
 
-    if ($colsTotal > $MAX_PARAMS) {
+    if ($valuesTotal > $MAX_PARAMS) {
         foreach (chunk($data, $chunkBy) as $chunk) {
             insertMultiple($dbh, $partialInsertSql, $chunk);
         }
