@@ -54,19 +54,17 @@ function insertMultiple(
         return "({$x})";
     };
 
-    $columnListPlaceholder = array_fill(0, count($data[0]), "?");
-    $columnListPlaceholderString = $wrapWithParentheses(implode(",", $columnListPlaceholder));
-
-    $params = [];
-    $valuesListPlaceholders = [];
-    foreach ($data as $datum) {
-        $valuesListPlaceholders[] = $columnListPlaceholderString;
-        foreach ($datum as $k => $v) {
-            $params[] = $v;
+    $columnsPlaceholders = array_fill(0, count($data[0]), "?");
+    $values = [];
+    $valuesPlaceholders = [];
+    foreach ($data as $item) {
+        $valuesPlaceholders[] = $wrapWithParentheses(implode(",", $columnsPlaceholders));
+        foreach ($item as $v) {
+            $values[] = $v;
         }
     }
 
-    $valuesListPlaceholdersStringified = implode("," . PHP_EOL, $valuesListPlaceholders);
-    $stmt = $dbh->prepare("{$partialInsertSql} VALUES {$valuesListPlaceholdersStringified}");
-    $stmt->execute($params);
+    $valuesPlaceholdersStringified = implode("," . PHP_EOL, $valuesPlaceholders);
+    $stmt = $dbh->prepare("{$partialInsertSql} VALUES {$valuesPlaceholdersStringified}");
+    $stmt->execute($values);
 }

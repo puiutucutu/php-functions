@@ -25,7 +25,6 @@ function insertMultipleChunked(
 ) {
     $numOfInsertValuesPerRow = count($data[0]);
     $numOfInsertValues = $numOfInsertValuesPerRow * count($data);
-
     $numOfValuesToBeInsertedExceedsMax = $numOfInsertValues > $MAX_PARAMS;
     $chunkBy = $MAX_PARAMS / $numOfInsertValuesPerRow;
 
