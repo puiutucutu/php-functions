@@ -1,16 +1,17 @@
 <?php
 
 /**
- * @param array $items
- *
+ * @param array $xs
  * @return string
+ * @example
+ * prepareItemsForWhereIn(["hello","world"]); //=> 'hello','world'
  */
-function prepareItemsForWhereIn(array $items)
+function prepareItemsForWhereIn(array $xs)
 {
     $wrapWithSingleQuotes = wrapWith("'");
     $prepared = array_map(function($el) use ($wrapWithSingleQuotes) {
         return $wrapWithSingleQuotes($el);
-    }, $items);
+    }, $xs);
 
     return join(",", $prepared);
 }
