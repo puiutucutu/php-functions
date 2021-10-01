@@ -4,9 +4,9 @@
  * @param array $xs
  * @return string
  * @example
- * prepareItemsForWhereIn(["hello","world"]); //=> 'hello','world'
+ * makeWhereInPredicate(["hello","world"]); //=> 'hello','world'
  */
-function prepareItemsForWhereIn(array $xs)
+function makeWhereInPredicate(array $xs)
 {
     $wrapWithSingleQuotes = wrapWith("'");
     $prepared = array_map(function($el) use ($wrapWithSingleQuotes) {
