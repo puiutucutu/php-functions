@@ -7,7 +7,8 @@
  *
  * @return \Closure
  */
-function wrapWith($wrapCharacter) {
+function wrapWith($wrapCharacter)
+{
     return function($x) use ($wrapCharacter) {
         return "${wrapCharacter}${x}${wrapCharacter}";
     };
