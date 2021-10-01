@@ -5,6 +5,7 @@
  *
  * @return array
  */
-function getDuplicates(array $xs) {
+function getDuplicates(array $xs)
+{
     return array_unique($xs);
 }
