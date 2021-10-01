@@ -9,9 +9,12 @@
 function makeWhereInPredicate(array $xs)
 {
     $wrapWithSingleQuotes = wrapWith("'");
-    $prepared = array_map(function($el) use ($wrapWithSingleQuotes) {
-        return $wrapWithSingleQuotes($el);
-    }, $xs);
+    $prepared = array_map(
+        function($el) use ($wrapWithSingleQuotes) {
+            return $wrapWithSingleQuotes($el);
+        },
+        $xs
+    );
 
     return join(",", $prepared);
 }
