@@ -9,6 +9,7 @@
  *
  * @return string
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart
+ * @example padStart(4, "hello", "0"); //=> 0000hello
  */
 function padStart($targetLength, $target, $padString = " ")
 {
