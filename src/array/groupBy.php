@@ -7,7 +7,7 @@ $temp = [
   ["brand" => "Mercedes", "model" => "G Klasse"],
 ];
 
-$after = groupBy("brand", $temp); //=> ["BMW" => ["model" => "3 Series"], "Mercedes" => ["model" => "G Klasse"]];
+$after = groupBy("brand", $temp); //=> ["BMW" => ["brand" => "BMW", "model" => "3 Series"], "Mercedes" => ["brand" => "Mercedes", "model" => "G Klasse"]];
 
 */
 
@@ -16,7 +16,7 @@ $after = groupBy("brand", $temp); //=> ["BMW" => ["model" => "3 Series"], "Merce
  * @param array  $xs
  *
  * @return array
- * @throws \Exception
+ * @throws Exception
  */
 function groupBy($key, array $xs)
 {
