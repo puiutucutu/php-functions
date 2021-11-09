@@ -8,6 +8,5 @@ function head(array $xs)
 {
     if (empty($xs)) return [];
     list($x) = $xs;
-
     return $x;
 }
